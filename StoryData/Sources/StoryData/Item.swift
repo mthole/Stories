@@ -9,10 +9,10 @@ import Foundation
 import SwiftData
 
 @Model
-final class Item {
-    var timestamp: Date = Date.distantPast
+public final class Item {
+    public var timestamp: Date = Date.distantPast
     
-    init(timestamp: Date) {
+    public init(timestamp: Date) {
         self.timestamp = timestamp
     }
 }

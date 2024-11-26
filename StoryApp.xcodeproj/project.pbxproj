@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD3060922CF3EDF7000FE02B /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CD3060912CF3EDF7000FE02B /* OpenAI */; };
+		CD9225F42CF6417A008E985B /* StoryData in Frameworks */ = {isa = PBXBuildFile; productRef = CD9225F32CF6417A008E985B /* StoryData */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		CD1617FA2CF3D97800E4B2F8 /* Exceptions for "StoryApp" folder in "StoryApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				/Users/mthole/Projects/StoryApp/StoryApp/StoryData,
 				Info.plist,
 			);
 			target = CD1617D32CF3D97700E4B2F8 /* StoryApp */;
@@ -62,16 +64,6 @@
 			path = StoryAppUITests;
 			sourceTree = "<group>";
 		};
-		CD16181C2CF3E1E800E4B2F8 /* SwiftData Models */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "SwiftData Models";
-			sourceTree = "<group>";
-		};
-		CD30609C2CF3F2FD000FE02B /* Models */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Models;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9225F42CF6417A008E985B /* StoryData in Frameworks */,
 				CD3060922CF3EDF7000FE02B /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				CD1617D62CF3D97700E4B2F8 /* StoryApp */,
-				CD30609C2CF3F2FD000FE02B /* Models */,
-				CD16181C2CF3E1E800E4B2F8 /* SwiftData Models */,
 				CD1617EB2CF3D97800E4B2F8 /* StoryAppTests */,
 				CD1617F52CF3D97800E4B2F8 /* StoryAppUITests */,
 				CD1617D52CF3D97700E4B2F8 /* Products */,
@@ -139,12 +130,11 @@
 			);
 			fileSystemSynchronizedGroups = (
 				CD1617D62CF3D97700E4B2F8 /* StoryApp */,
-				CD16181C2CF3E1E800E4B2F8 /* SwiftData Models */,
-				CD30609C2CF3F2FD000FE02B /* Models */,
 			);
 			name = StoryApp;
 			packageProductDependencies = (
 				CD3060912CF3EDF7000FE02B /* OpenAI */,
+				CD9225F32CF6417A008E985B /* StoryData */,
 			);
 			productName = Stories;
 			productReference = CD1617D42CF3D97700E4B2F8 /* StoryApp.app */;
@@ -230,6 +220,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				CD3060902CF3EDF7000FE02B /* XCRemoteSwiftPackageReference "OpenAI" */,
+				CD9225F22CF6417A008E985B /* XCLocalSwiftPackageReference "StoryData" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CD1617D52CF3D97700E4B2F8 /* Products */;
@@ -603,6 +594,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		CD9225F22CF6417A008E985B /* XCLocalSwiftPackageReference "StoryData" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = StoryData;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		CD3060902CF3EDF7000FE02B /* XCRemoteSwiftPackageReference "OpenAI" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -619,6 +617,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD3060902CF3EDF7000FE02B /* XCRemoteSwiftPackageReference "OpenAI" */;
 			productName = OpenAI;
+		};
+		CD9225F32CF6417A008E985B /* StoryData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StoryData;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

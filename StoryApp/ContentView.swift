@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SwiftData
+import StoryData
+import OpenAI
 
 struct ContentView: View {
     @ObservedObject var chatStore: ChatStore
@@ -72,8 +74,10 @@ struct ContentView: View {
         }
     }
 }
-
-//#Preview {
-//    ContentView(chatStore: ChatStore)
-//        .modelContainer(for: Item.self, inMemory: true)
-//}
+#Preview {
+    ContentView(chatStore: ChatStore(
+        openAIClient: OpenAI(apiToken: "preview-mock-key"),
+        idProvider: { UUID().uuidString }
+    ))
+    .modelContainer(for: Item.self, inMemory: true)
+}
