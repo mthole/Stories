@@ -1,6 +1,6 @@
 //
-//  StoriesUITestsLaunchTests.swift
-//  StoriesUITests
+//  StoryAppUITestsLaunchTests.swift
+//  StoryAppUITests
 //
 //  Created by Michael Thole on 11/24/24.
 //

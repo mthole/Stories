@@ -1,6 +1,6 @@
 //
-//  StoriesApp.swift
-//  Stories
+//  StoryApp.swift
+//  StoryApp
 //
 //  Created by Michael Thole on 11/24/24.
 //
@@ -10,8 +10,9 @@ import SwiftData
 import StoryData
 
 @main
-struct StoriesApp: App {
+struct StoryApp: App {
     @AppStorage("apiKey") var apiKey: String = ""
+    @State private var cloudKitRepository: CloudKitRepository
 
     let idProvider: () -> String
     let dateProvider: () -> Date
@@ -21,27 +22,22 @@ struct StoriesApp: App {
             UUID().uuidString
         }
         self.dateProvider = Date.init
+        self.cloudKitRepository = CloudKitRepository()
     }
 
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false, cloudKitDatabase: .automatic)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
 
     var body: some Scene {
         WindowGroup {
             Group {
                 APIProvidedView(apiKey: $apiKey, idProvider: idProvider)
             }
+            .onAppear(perform: {
+                Task {
+                    let remoteConfiguration = cloudKitRepository.fetchRemoteConfiguration()
+                    print("*** remoteConfiguration: \(remoteConfiguration)")
+                }
+            })
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(cloudKitRepository.sharedModelContainer)
     }
 }

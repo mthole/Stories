@@ -5,11 +5,22 @@ import SwiftData
 /// TODO: How to link stories and worlds, etc.
 /// TODO: How to link artwork?
 /// TODO: How to like TTS audio caches, etc
-@Model
-final class Story {
-    var timestamp: Date = Date.distantPast
+public typealias Story = StorySchemaV1.Story
+
+public enum StorySchemaV1: VersionedSchema {
+    nonisolated(unsafe) public static var versionIdentifier = Schema.Version(0, 0, 1)
     
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    public static var models: [any PersistentModel.Type] {
+        [Story.self]
+    }
+    
+    @Model
+    public final class Story {
+        public var freeformText: String = ""
+        
+        public init(freeformText: String) {
+            self.freeformText = freeformText
+        }
     }
 }
+

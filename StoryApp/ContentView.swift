@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Stories
+//  StoryApp
 //
 //  Created by Michael Thole on 11/24/24.
 //
@@ -17,7 +17,7 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var selectedTab = 0
 
-    @Query private var items: [Item]
+    @Query private var items: [Story]
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -32,9 +32,9 @@ struct ContentView: View {
                 List {
                     ForEach(items) { item in
                         NavigationLink {
-                            Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                            Text("Story: \(item.freeformText)")
                         } label: {
-                            Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                            Text("Story: \(item.freeformText)")
                         }
                     }
                     .onDelete(perform: deleteItems)
@@ -61,8 +61,8 @@ struct ContentView: View {
     
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+            let newStory = Story(freeformText: "new story here")
+            modelContext.insert(newStory)
         }
     }
     
@@ -79,5 +79,5 @@ struct ContentView: View {
         openAIClient: OpenAI(apiToken: "preview-mock-key"),
         idProvider: { UUID().uuidString }
     ))
-    .modelContainer(for: Item.self, inMemory: true)
+    .modelContainer(for: Story.self, inMemory: true)
 }
