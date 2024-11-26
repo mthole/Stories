@@ -27,8 +27,39 @@ public final class CloudKitRepository {
         }
     }()
 
-    public func fetchRemoteConfiguration() -> RemoteConfiguration {
-        return RemoteConfiguration(openAiApiKey: "TODO")
+    public func fetchRemoteConfiguration() async throws -> RemoteConfiguration {
+//        // First try to fetch from local storage
+//        let descriptor = FetchDescriptor<RemoteConfiguration>()
+//        if let existingConfig = try? sharedModelContainer.mainContext.fetch(descriptor).first {
+//            return existingConfig
+//        }
+//        
+//        // If not found locally, fetch from CloudKit
+//        let database = CKContainer.default().publicCloudDatabase
+//        let query = CKQuery(recordType: "RemoteConfigurationV1", predicate: NSPredicate(value: true))
+//        
+//        let (results, _) = try await database.records(matching: query)
+//        
+//        guard let firstResult = results.first,
+//              case .success(let record) = firstResult.1 else {
+//            throw NSError(domain: "RemoteConfiguration",
+//                         code: 404,
+//                         userInfo: [NSLocalizedDescriptionKey: "No configuration found"])
+//        }
+//        
+//        guard let openAiApiKey = record["openAiApiKey"] as? String else {
+//            throw NSError(domain: "RemoteConfiguration",
+//                         code: 500,
+//                         userInfo: [NSLocalizedDescriptionKey: "Missing API Key"])
+//        }
+//        
+//        // Create and save the configuration locally
+//        let config = RemoteConfiguration(openAiApiKey: openAiApiKey)
+//        sharedModelContainer.mainContext.insert(config)
+//        try sharedModelContainer.mainContext.save()
+//        
+//        return config
+        return RemoteConfiguration(openAiApiKey: "stub")
     }
 }
 

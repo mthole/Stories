@@ -7,59 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD3060922CF3EDF7000FE02B /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CD3060912CF3EDF7000FE02B /* OpenAI */; };
-		CD9225F42CF6417A008E985B /* StoryData in Frameworks */ = {isa = PBXBuildFile; productRef = CD9225F32CF6417A008E985B /* StoryData */; };
+		CD27EF3E2CF698A4001455DF /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CD27EF3D2CF698A4001455DF /* OpenAI */; };
+		CD27EF422CF698B7001455DF /* StoryData in Frameworks */ = {isa = PBXBuildFile; productRef = CD27EF412CF698B7001455DF /* StoryData */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CD1617E92CF3D97800E4B2F8 /* PBXContainerItemProxy */ = {
+		CD9DD1E22CF69819003A0E10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CD1617CC2CF3D97700E4B2F8 /* Project object */;
+			containerPortal = CD9DD1C52CF69818003A0E10 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CD1617D32CF3D97700E4B2F8;
-			remoteInfo = Stories;
+			remoteGlobalIDString = CD9DD1CC2CF69818003A0E10;
+			remoteInfo = StoryApp;
 		};
-		CD1617F32CF3D97800E4B2F8 /* PBXContainerItemProxy */ = {
+		CD9DD1EC2CF69819003A0E10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CD1617CC2CF3D97700E4B2F8 /* Project object */;
+			containerPortal = CD9DD1C52CF69818003A0E10 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CD1617D32CF3D97700E4B2F8;
-			remoteInfo = Stories;
+			remoteGlobalIDString = CD9DD1CC2CF69818003A0E10;
+			remoteInfo = StoryApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD1617D42CF3D97700E4B2F8 /* StoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD1617E82CF3D97800E4B2F8 /* StoryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD1617F22CF3D97800E4B2F8 /* StoryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9DD1CD2CF69818003A0E10 /* StoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9DD1E12CF69819003A0E10 /* StoryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9DD1EB2CF69819003A0E10 /* StoryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CD1617FA2CF3D97800E4B2F8 /* Exceptions for "StoryApp" folder in "StoryApp" target */ = {
+		CD9DD1F32CF69819003A0E10 /* Exceptions for "StoryApp" folder in "StoryApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				/Users/mthole/Projects/StoryApp/StoryApp/StoryData,
 				Info.plist,
 			);
-			target = CD1617D32CF3D97700E4B2F8 /* StoryApp */;
+			target = CD9DD1CC2CF69818003A0E10 /* StoryApp */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CD1617D62CF3D97700E4B2F8 /* StoryApp */ = {
+		CD9DD1CF2CF69818003A0E10 /* StoryApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				CD1617FA2CF3D97800E4B2F8 /* Exceptions for "StoryApp" folder in "StoryApp" target */,
+				CD9DD1F32CF69819003A0E10 /* Exceptions for "StoryApp" folder in "StoryApp" target */,
 			);
 			path = StoryApp;
 			sourceTree = "<group>";
 		};
-		CD1617EB2CF3D97800E4B2F8 /* StoryAppTests */ = {
+		CD9DD1E42CF69819003A0E10 /* StoryAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = StoryAppTests;
 			sourceTree = "<group>";
 		};
-		CD1617F52CF3D97800E4B2F8 /* StoryAppUITests */ = {
+		CD9DD1EE2CF69819003A0E10 /* StoryAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = StoryAppUITests;
 			sourceTree = "<group>";
@@ -67,23 +66,23 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CD1617D12CF3D97700E4B2F8 /* Frameworks */ = {
+		CD9DD1CA2CF69818003A0E10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD9225F42CF6417A008E985B /* StoryData in Frameworks */,
-				CD3060922CF3EDF7000FE02B /* OpenAI in Frameworks */,
+				CD27EF422CF698B7001455DF /* StoryData in Frameworks */,
+				CD27EF3E2CF698A4001455DF /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD1617E52CF3D97800E4B2F8 /* Frameworks */ = {
+		CD9DD1DE2CF69819003A0E10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD1617EF2CF3D97800E4B2F8 /* Frameworks */ = {
+		CD9DD1E82CF69819003A0E10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,22 +92,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD1617CB2CF3D97700E4B2F8 = {
+		CD27EF402CF698B7001455DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD1617D62CF3D97700E4B2F8 /* StoryApp */,
-				CD1617EB2CF3D97800E4B2F8 /* StoryAppTests */,
-				CD1617F52CF3D97800E4B2F8 /* StoryAppUITests */,
-				CD1617D52CF3D97700E4B2F8 /* Products */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD9DD1C42CF69818003A0E10 = {
+			isa = PBXGroup;
+			children = (
+				CD9DD1CF2CF69818003A0E10 /* StoryApp */,
+				CD9DD1E42CF69819003A0E10 /* StoryAppTests */,
+				CD9DD1EE2CF69819003A0E10 /* StoryAppUITests */,
+				CD27EF402CF698B7001455DF /* Frameworks */,
+				CD9DD1CE2CF69818003A0E10 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CD1617D52CF3D97700E4B2F8 /* Products */ = {
+		CD9DD1CE2CF69818003A0E10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD1617D42CF3D97700E4B2F8 /* StoryApp.app */,
-				CD1617E82CF3D97800E4B2F8 /* StoryAppTests.xctest */,
-				CD1617F22CF3D97800E4B2F8 /* StoryAppUITests.xctest */,
+				CD9DD1CD2CF69818003A0E10 /* StoryApp.app */,
+				CD9DD1E12CF69819003A0E10 /* StoryAppTests.xctest */,
+				CD9DD1EB2CF69819003A0E10 /* StoryAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,140 +123,140 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD1617D32CF3D97700E4B2F8 /* StoryApp */ = {
+		CD9DD1CC2CF69818003A0E10 /* StoryApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD1617FB2CF3D97800E4B2F8 /* Build configuration list for PBXNativeTarget "StoryApp" */;
+			buildConfigurationList = CD9DD1F42CF69819003A0E10 /* Build configuration list for PBXNativeTarget "StoryApp" */;
 			buildPhases = (
-				CD1617D02CF3D97700E4B2F8 /* Sources */,
-				CD1617D12CF3D97700E4B2F8 /* Frameworks */,
-				CD1617D22CF3D97700E4B2F8 /* Resources */,
+				CD9DD1C92CF69818003A0E10 /* Sources */,
+				CD9DD1CA2CF69818003A0E10 /* Frameworks */,
+				CD9DD1CB2CF69818003A0E10 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CD1617D62CF3D97700E4B2F8 /* StoryApp */,
+				CD9DD1CF2CF69818003A0E10 /* StoryApp */,
 			);
 			name = StoryApp;
 			packageProductDependencies = (
-				CD3060912CF3EDF7000FE02B /* OpenAI */,
-				CD9225F32CF6417A008E985B /* StoryData */,
+				CD27EF3D2CF698A4001455DF /* OpenAI */,
+				CD27EF412CF698B7001455DF /* StoryData */,
 			);
-			productName = Stories;
-			productReference = CD1617D42CF3D97700E4B2F8 /* StoryApp.app */;
+			productName = StoryApp;
+			productReference = CD9DD1CD2CF69818003A0E10 /* StoryApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CD1617E72CF3D97800E4B2F8 /* StoryAppTests */ = {
+		CD9DD1E02CF69819003A0E10 /* StoryAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD1618002CF3D97800E4B2F8 /* Build configuration list for PBXNativeTarget "StoryAppTests" */;
+			buildConfigurationList = CD9DD1F92CF69819003A0E10 /* Build configuration list for PBXNativeTarget "StoryAppTests" */;
 			buildPhases = (
-				CD1617E42CF3D97800E4B2F8 /* Sources */,
-				CD1617E52CF3D97800E4B2F8 /* Frameworks */,
-				CD1617E62CF3D97800E4B2F8 /* Resources */,
+				CD9DD1DD2CF69819003A0E10 /* Sources */,
+				CD9DD1DE2CF69819003A0E10 /* Frameworks */,
+				CD9DD1DF2CF69819003A0E10 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CD1617EA2CF3D97800E4B2F8 /* PBXTargetDependency */,
+				CD9DD1E32CF69819003A0E10 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				CD1617EB2CF3D97800E4B2F8 /* StoryAppTests */,
+				CD9DD1E42CF69819003A0E10 /* StoryAppTests */,
 			);
 			name = StoryAppTests;
 			packageProductDependencies = (
 			);
-			productName = StoriesTests;
-			productReference = CD1617E82CF3D97800E4B2F8 /* StoryAppTests.xctest */;
+			productName = StoryAppTests;
+			productReference = CD9DD1E12CF69819003A0E10 /* StoryAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CD1617F12CF3D97800E4B2F8 /* StoryAppUITests */ = {
+		CD9DD1EA2CF69819003A0E10 /* StoryAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD1618032CF3D97800E4B2F8 /* Build configuration list for PBXNativeTarget "StoryAppUITests" */;
+			buildConfigurationList = CD9DD1FC2CF69819003A0E10 /* Build configuration list for PBXNativeTarget "StoryAppUITests" */;
 			buildPhases = (
-				CD1617EE2CF3D97800E4B2F8 /* Sources */,
-				CD1617EF2CF3D97800E4B2F8 /* Frameworks */,
-				CD1617F02CF3D97800E4B2F8 /* Resources */,
+				CD9DD1E72CF69819003A0E10 /* Sources */,
+				CD9DD1E82CF69819003A0E10 /* Frameworks */,
+				CD9DD1E92CF69819003A0E10 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CD1617F42CF3D97800E4B2F8 /* PBXTargetDependency */,
+				CD9DD1ED2CF69819003A0E10 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				CD1617F52CF3D97800E4B2F8 /* StoryAppUITests */,
+				CD9DD1EE2CF69819003A0E10 /* StoryAppUITests */,
 			);
 			name = StoryAppUITests;
 			packageProductDependencies = (
 			);
-			productName = StoriesUITests;
-			productReference = CD1617F22CF3D97800E4B2F8 /* StoryAppUITests.xctest */;
+			productName = StoryAppUITests;
+			productReference = CD9DD1EB2CF69819003A0E10 /* StoryAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CD1617CC2CF3D97700E4B2F8 /* Project object */ = {
+		CD9DD1C52CF69818003A0E10 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					CD1617D32CF3D97700E4B2F8 = {
+					CD9DD1CC2CF69818003A0E10 = {
 						CreatedOnToolsVersion = 16.1;
 					};
-					CD1617E72CF3D97800E4B2F8 = {
+					CD9DD1E02CF69819003A0E10 = {
 						CreatedOnToolsVersion = 16.1;
-						TestTargetID = CD1617D32CF3D97700E4B2F8;
+						TestTargetID = CD9DD1CC2CF69818003A0E10;
 					};
-					CD1617F12CF3D97800E4B2F8 = {
+					CD9DD1EA2CF69819003A0E10 = {
 						CreatedOnToolsVersion = 16.1;
-						TestTargetID = CD1617D32CF3D97700E4B2F8;
+						TestTargetID = CD9DD1CC2CF69818003A0E10;
 					};
 				};
 			};
-			buildConfigurationList = CD1617CF2CF3D97700E4B2F8 /* Build configuration list for PBXProject "StoryApp" */;
+			buildConfigurationList = CD9DD1C82CF69818003A0E10 /* Build configuration list for PBXProject "StoryApp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = CD1617CB2CF3D97700E4B2F8;
+			mainGroup = CD9DD1C42CF69818003A0E10;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				CD3060902CF3EDF7000FE02B /* XCRemoteSwiftPackageReference "OpenAI" */,
-				CD9225F22CF6417A008E985B /* XCLocalSwiftPackageReference "StoryData" */,
+				CD27EF3C2CF698A4001455DF /* XCRemoteSwiftPackageReference "OpenAI" */,
+				CD27EF3F2CF698AE001455DF /* XCLocalSwiftPackageReference "Packages/StoryData" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = CD1617D52CF3D97700E4B2F8 /* Products */;
+			productRefGroup = CD9DD1CE2CF69818003A0E10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD1617D32CF3D97700E4B2F8 /* StoryApp */,
-				CD1617E72CF3D97800E4B2F8 /* StoryAppTests */,
-				CD1617F12CF3D97800E4B2F8 /* StoryAppUITests */,
+				CD9DD1CC2CF69818003A0E10 /* StoryApp */,
+				CD9DD1E02CF69819003A0E10 /* StoryAppTests */,
+				CD9DD1EA2CF69819003A0E10 /* StoryAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CD1617D22CF3D97700E4B2F8 /* Resources */ = {
+		CD9DD1CB2CF69818003A0E10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD1617E62CF3D97800E4B2F8 /* Resources */ = {
+		CD9DD1DF2CF69819003A0E10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD1617F02CF3D97800E4B2F8 /* Resources */ = {
+		CD9DD1E92CF69819003A0E10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,21 +266,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CD1617D02CF3D97700E4B2F8 /* Sources */ = {
+		CD9DD1C92CF69818003A0E10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD1617E42CF3D97800E4B2F8 /* Sources */ = {
+		CD9DD1DD2CF69819003A0E10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD1617EE2CF3D97800E4B2F8 /* Sources */ = {
+		CD9DD1E72CF69819003A0E10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,26 +290,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CD1617EA2CF3D97800E4B2F8 /* PBXTargetDependency */ = {
+		CD9DD1E32CF69819003A0E10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CD1617D32CF3D97700E4B2F8 /* StoryApp */;
-			targetProxy = CD1617E92CF3D97800E4B2F8 /* PBXContainerItemProxy */;
+			target = CD9DD1CC2CF69818003A0E10 /* StoryApp */;
+			targetProxy = CD9DD1E22CF69819003A0E10 /* PBXContainerItemProxy */;
 		};
-		CD1617F42CF3D97800E4B2F8 /* PBXTargetDependency */ = {
+		CD9DD1ED2CF69819003A0E10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CD1617D32CF3D97700E4B2F8 /* StoryApp */;
-			targetProxy = CD1617F32CF3D97800E4B2F8 /* PBXContainerItemProxy */;
+			target = CD9DD1CC2CF69818003A0E10 /* StoryApp */;
+			targetProxy = CD9DD1EC2CF69819003A0E10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		CD1617FC2CF3D97800E4B2F8 /* Debug */ = {
+		CD9DD1F52CF69819003A0E10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = StoryApp/StoryApp.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StoryApp/Preview Content\"";
@@ -320,22 +326,20 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.Stories;
+				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CD1617FD2CF3D97800E4B2F8 /* Release */ = {
+		CD9DD1F62CF69819003A0E10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = StoryApp/StoryApp.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StoryApp/Preview Content\"";
@@ -353,16 +357,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.Stories;
+				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		CD1617FE2CF3D97800E4B2F8 /* Debug */ = {
+		CD9DD1F72CF69819003A0E10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -425,7 +428,7 @@
 			};
 			name = Debug;
 		};
-		CD1617FF2CF3D97800E4B2F8 /* Release */ = {
+		CD9DD1F82CF69819003A0E10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -481,7 +484,7 @@
 			};
 			name = Release;
 		};
-		CD1618012CF3D97800E4B2F8 /* Debug */ = {
+		CD9DD1FA2CF69819003A0E10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,7 +494,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoriesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoryAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -500,7 +503,7 @@
 			};
 			name = Debug;
 		};
-		CD1618022CF3D97800E4B2F8 /* Release */ = {
+		CD9DD1FB2CF69819003A0E10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,7 +513,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoriesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoryAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -519,7 +522,7 @@
 			};
 			name = Release;
 		};
-		CD1618042CF3D97800E4B2F8 /* Debug */ = {
+		CD9DD1FD2CF69819003A0E10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -527,16 +530,16 @@
 				DEVELOPMENT_TEAM = TV6KLL8Y79;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoriesUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoryAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Stories;
+				TEST_TARGET_NAME = StoryApp;
 			};
 			name = Debug;
 		};
-		CD1618052CF3D97800E4B2F8 /* Release */ = {
+		CD9DD1FE2CF69819003A0E10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -544,50 +547,50 @@
 				DEVELOPMENT_TEAM = TV6KLL8Y79;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoriesUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = mthole.com.StoryAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Stories;
+				TEST_TARGET_NAME = StoryApp;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD1617CF2CF3D97700E4B2F8 /* Build configuration list for PBXProject "StoryApp" */ = {
+		CD9DD1C82CF69818003A0E10 /* Build configuration list for PBXProject "StoryApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD1617FE2CF3D97800E4B2F8 /* Debug */,
-				CD1617FF2CF3D97800E4B2F8 /* Release */,
+				CD9DD1F72CF69819003A0E10 /* Debug */,
+				CD9DD1F82CF69819003A0E10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD1617FB2CF3D97800E4B2F8 /* Build configuration list for PBXNativeTarget "StoryApp" */ = {
+		CD9DD1F42CF69819003A0E10 /* Build configuration list for PBXNativeTarget "StoryApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD1617FC2CF3D97800E4B2F8 /* Debug */,
-				CD1617FD2CF3D97800E4B2F8 /* Release */,
+				CD9DD1F52CF69819003A0E10 /* Debug */,
+				CD9DD1F62CF69819003A0E10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD1618002CF3D97800E4B2F8 /* Build configuration list for PBXNativeTarget "StoryAppTests" */ = {
+		CD9DD1F92CF69819003A0E10 /* Build configuration list for PBXNativeTarget "StoryAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD1618012CF3D97800E4B2F8 /* Debug */,
-				CD1618022CF3D97800E4B2F8 /* Release */,
+				CD9DD1FA2CF69819003A0E10 /* Debug */,
+				CD9DD1FB2CF69819003A0E10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD1618032CF3D97800E4B2F8 /* Build configuration list for PBXNativeTarget "StoryAppUITests" */ = {
+		CD9DD1FC2CF69819003A0E10 /* Build configuration list for PBXNativeTarget "StoryAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD1618042CF3D97800E4B2F8 /* Debug */,
-				CD1618052CF3D97800E4B2F8 /* Release */,
+				CD9DD1FD2CF69819003A0E10 /* Debug */,
+				CD9DD1FE2CF69819003A0E10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -595,14 +598,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		CD9225F22CF6417A008E985B /* XCLocalSwiftPackageReference "StoryData" */ = {
+		CD27EF3F2CF698AE001455DF /* XCLocalSwiftPackageReference "Packages/StoryData" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = StoryData;
+			relativePath = Packages/StoryData;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD3060902CF3EDF7000FE02B /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+		CD27EF3C2CF698A4001455DF /* XCRemoteSwiftPackageReference "OpenAI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
 			requirement = {
@@ -613,16 +616,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD3060912CF3EDF7000FE02B /* OpenAI */ = {
+		CD27EF3D2CF698A4001455DF /* OpenAI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD3060902CF3EDF7000FE02B /* XCRemoteSwiftPackageReference "OpenAI" */;
+			package = CD27EF3C2CF698A4001455DF /* XCRemoteSwiftPackageReference "OpenAI" */;
 			productName = OpenAI;
 		};
-		CD9225F32CF6417A008E985B /* StoryData */ = {
+		CD27EF412CF698B7001455DF /* StoryData */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = CD27EF3F2CF698AE001455DF /* XCLocalSwiftPackageReference "Packages/StoryData" */;
 			productName = StoryData;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = CD1617CC2CF3D97700E4B2F8 /* Project object */;
+	rootObject = CD9DD1C52CF69818003A0E10 /* Project object */;
 }

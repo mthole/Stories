@@ -33,7 +33,7 @@ struct StoryApp: App {
             }
             .onAppear(perform: {
                 Task {
-                    let remoteConfiguration = cloudKitRepository.fetchRemoteConfiguration()
+                    let remoteConfiguration = try await cloudKitRepository.fetchRemoteConfiguration()
                     print("*** remoteConfiguration: \(remoteConfiguration)")
                 }
             })

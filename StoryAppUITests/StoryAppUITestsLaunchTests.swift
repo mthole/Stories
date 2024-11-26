@@ -2,12 +2,12 @@
 //  StoryAppUITestsLaunchTests.swift
 //  StoryAppUITests
 //
-//  Created by Michael Thole on 11/24/24.
+//  Created by Michael Thole on 11/26/24.
 //
 
 import XCTest
 
-final class StoriesUITestsLaunchTests: XCTestCase {
+final class StoryAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
