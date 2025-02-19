@@ -1,7 +1,7 @@
 #if os(iOS)
-import UIKit
+    import UIKit
 #elseif os(macOS)
-import AppKit
+    import AppKit
 #endif
 import OpenAI
 import SwiftUI
@@ -20,17 +20,17 @@ struct DetailView: View {
 
     private var fillColor: Color {
         #if os(iOS)
-        return Color(uiColor: UIColor.systemBackground)
+            return Color(uiColor: UIColor.systemBackground)
         #elseif os(macOS)
-        return Color(nsColor: NSColor.textBackgroundColor)
+            return Color(nsColor: NSColor.textBackgroundColor)
         #endif
     }
 
     private var strokeColor: Color {
         #if os(iOS)
-        return Color(uiColor: UIColor.systemGray5)
+            return Color(uiColor: UIColor.systemGray5)
         #elseif os(macOS)
-        return Color(nsColor: NSColor.lightGray)
+            return Color(nsColor: NSColor.lightGray)
         #endif
     }
 
@@ -71,9 +71,9 @@ struct DetailView: View {
         .font(.caption)
         .foregroundColor({
             #if os(iOS)
-            return Color(uiColor: .systemRed)
+                return Color(uiColor: .systemRed)
             #elseif os(macOS)
-            return Color(.systemRed)
+                return Color(.systemRed)
             #endif
         }())
         .padding(.horizontal)
@@ -129,18 +129,18 @@ struct DetailView: View {
         }
         .padding(.bottom)
     }
-    
+
     private func tapSendMessage(
-        scrollViewProxy: ScrollViewProxy
+        scrollViewProxy _: ScrollViewProxy
     ) {
         let message = inputText.trimmingCharacters(in: .whitespacesAndNewlines)
         if message.isEmpty {
             return
         }
-        
+
         sendMessage(message, selectedChatModel)
         inputText = ""
-        
+
 //        if let lastMessage = conversation.messages.last {
 //            scrollViewProxy.scrollTo(lastMessage.id, anchor: .bottom)
 //        }
@@ -152,25 +152,25 @@ struct ChatBubble: View {
 
     private var assistantBackgroundColor: Color {
         #if os(iOS)
-        return Color(uiColor: UIColor.systemGray5)
+            return Color(uiColor: UIColor.systemGray5)
         #elseif os(macOS)
-        return Color(nsColor: NSColor.lightGray)
+            return Color(nsColor: NSColor.lightGray)
         #endif
     }
 
     private var userForegroundColor: Color {
         #if os(iOS)
-        return Color(uiColor: .white)
+            return Color(uiColor: .white)
         #elseif os(macOS)
-        return Color(nsColor: NSColor.white)
+            return Color(nsColor: NSColor.white)
         #endif
     }
 
     private var userBackgroundColor: Color {
         #if os(iOS)
-        return Color(uiColor: .systemBlue)
+            return Color(uiColor: .systemBlue)
         #elseif os(macOS)
-        return Color(nsColor: NSColor.systemBlue)
+            return Color(nsColor: NSColor.systemBlue)
         #endif
     }
 
@@ -193,13 +193,13 @@ struct ChatBubble: View {
                     .background(userBackgroundColor)
                     .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             case .tool:
-              Text(message.content)
-                  .font(.footnote.monospaced())
-                  .padding(.horizontal, 16)
-                  .padding(.vertical, 12)
-                  .background(assistantBackgroundColor)
-                  .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-              Spacer(minLength: 24)
+                Text(message.content)
+                    .font(.footnote.monospaced())
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 12)
+                    .background(assistantBackgroundColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                Spacer(minLength: 24)
             case .system:
                 EmptyView()
             case .developer:
@@ -225,12 +225,12 @@ struct DetailView_Previews: PreviewProvider {
                     Message(id: "2", role: .user, content: "I need help with my subscription.", createdAt: Date(timeIntervalSinceReferenceDate: 100)),
                     Message(id: "3", role: .assistant, content: "Sure, what seems to be the problem with your subscription?", createdAt: Date(timeIntervalSinceReferenceDate: 200)),
                     Message(id: "4", role: .tool, content:
-                              """
-                              get_current_weather({
-                                "location": "Glasgow, Scotland",
-                                "format": "celsius"
-                              })
-                              """, createdAt: Date(timeIntervalSinceReferenceDate: 200))
+                        """
+                        get_current_weather({
+                          "location": "Glasgow, Scotland",
+                          "format": "celsius"
+                        })
+                        """, createdAt: Date(timeIntervalSinceReferenceDate: 200)),
                 ]
             ),
             error: nil,
@@ -238,4 +238,3 @@ struct DetailView_Previews: PreviewProvider {
         )
     }
 }
-

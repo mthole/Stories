@@ -6,13 +6,14 @@ import PackageDescription
 let package = Package(
     name: "StoryData",
     platforms: [
-        .iOS(.v17) // Specify iOS 17+ as the minimum deployment target
+        .iOS(.v17), // Specify iOS 17+ as the minimum deployment target
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "StoryData",
-            targets: ["StoryData"]),
+            targets: ["StoryData"]
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.

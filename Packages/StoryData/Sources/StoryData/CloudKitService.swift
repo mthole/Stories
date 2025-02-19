@@ -3,19 +3,16 @@ import Foundation
 import SwiftData
 
 public final class CloudKitService {
-    
     public init() {}
-    
+
     public var sharedModelContainer: ModelContainer = {
         let version = Schema.Version(0, 0, 1)
 
-        let models: [any PersistentModel.Type] = {
-            [Profile.self, World.self, Story.self]
-        }()
-        
+        let models: [any PersistentModel.Type] = [Profile.self, World.self, Story.self]
+
         let schema = Schema(models, version: version)
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false, cloudKitDatabase: .automatic)
-        
+
         do {
             return try ModelContainer(for: schema, migrationPlan: CloudKitMigrationPlan.self, configurations: modelConfiguration)
         } catch {
@@ -24,10 +21,9 @@ public final class CloudKitService {
     }()
 }
 
-
 //
-//@MainActor
-//public final class RemoteConfigurationManager {
+// @MainActor
+// public final class RemoteConfigurationManager {
 //    public static let shared = RemoteConfigurationManager()
 //
 //    private let database = CKContainer.default().publicCloudDatabase
@@ -39,7 +35,7 @@ public final class CloudKitService {
 //
 //        // Fetch all records, assuming there's only one RemoteConfiguration
 //        let (results, _) = try await database.records(matching: query)
-//        
+//
 //        // Get the first result and handle the Result type properly
 //        guard let firstResult = results.first,
 //              case .success(let record) = firstResult.1 else {
@@ -53,4 +49,4 @@ public final class CloudKitService {
 //
 //        return RemoteConfiguration(openAiApiKey: openAiApiKey)
 //    }
-//}
+// }

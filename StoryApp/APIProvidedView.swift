@@ -12,8 +12,8 @@ struct APIProvidedView: View {
         apiKey: Binding<String>,
         idProvider: @escaping () -> String
     ) {
-        self._apiKey = apiKey
-        self._chatStore = StateObject(
+        _apiKey = apiKey
+        _chatStore = StateObject(
             wrappedValue: ChatStore(
                 openAIClient: OpenAI(apiToken: apiKey.wrappedValue),
                 idProvider: idProvider

@@ -6,15 +6,15 @@ private struct IDProviderKey: EnvironmentKey {
     }
 }
 
-extension EnvironmentValues {
-    public var idProviderValue: () -> String {
+public extension EnvironmentValues {
+    var idProviderValue: () -> String {
         get { self[IDProviderKey.self] }
         set { self[IDProviderKey.self] = newValue }
     }
 }
 
-extension View {
-    public func idProviderValue(_ idProviderValue: @escaping () -> String) -> some View {
+public extension View {
+    func idProviderValue(_ idProviderValue: @escaping () -> String) -> some View {
         environment(\.idProviderValue, idProviderValue)
     }
 }

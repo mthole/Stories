@@ -5,27 +5,27 @@
 //  Created by Michael Thole on 11/24/24.
 //
 
-import SwiftUI
-import SwiftData
-import StoryData
 import Dependencies
+import StoryData
+import SwiftData
+import SwiftUI
 
 @main
 struct StoryApp: App {
     @AppStorage("apiKey") var apiKey: String = ""
-    
+
     @Dependency(\.remoteConfigStore) var remoteConfigStore
-    
+
     let idProvider: () -> String
     let dateProvider: () -> Date
-    
+
 //    @StateObject private var remoteConfigStore = RemoteConfigStore(service: RemoteConfigService.liveValue)
-    
+
     init() {
-        self.idProvider = {
+        idProvider = {
             UUID().uuidString
         }
-        self.dateProvider = Date.init
+        dateProvider = Date.init
     }
 
     var body: some Scene {

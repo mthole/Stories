@@ -5,9 +5,9 @@ struct Conversation {
         self.id = id
         self.messages = messages
     }
-    
+
     typealias ID = String
-    
+
     let id: String
     var messages: [Message]
 }

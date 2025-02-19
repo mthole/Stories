@@ -1,5 +1,5 @@
-import Foundation
 import Combine
+import Foundation
 import OpenAI
 
 public final class ChatStore: ObservableObject {
@@ -32,19 +32,20 @@ public final class ChatStore: ObservableObject {
     }
 
     // MARK: - Events
+
     func createConversation() {
         let conversation = Conversation(id: idProvider(), messages: [])
         conversations.append(conversation)
     }
-    
+
     func selectConversation(_ conversationId: Conversation.ID?) {
         selectedConversationID = conversationId
     }
-    
+
     func deleteConversation(_ conversationId: Conversation.ID) {
         conversations.removeAll(where: { $0.id == conversationId })
     }
-    
+
     @MainActor
     func sendMessage(
         _ message: Message,
@@ -61,7 +62,7 @@ public final class ChatStore: ObservableObject {
             model: model
         )
     }
-    
+
     @MainActor
     func completeChat(
         conversationId: Conversation.ID,
@@ -70,7 +71,7 @@ public final class ChatStore: ObservableObject {
         guard let conversation = conversations.first(where: { $0.id == conversationId }) else {
             return
         }
-                
+
         conversationErrors[conversationId] = nil
 
         do {
@@ -82,16 +83,16 @@ public final class ChatStore: ObservableObject {
                 name: "getWeatherData",
                 description: "Get the current weather in a given location",
                 parameters: .init(
-                  type: .object,
-                  properties: [
-                    "location": .init(type: .string, description: "The city and state, e.g. San Francisco, CA")
-                  ],
-                  required: ["location"]
+                    type: .object,
+                    properties: [
+                        "location": .init(type: .string, description: "The city and state, e.g. San Francisco, CA"),
+                    ],
+                    required: ["location"]
                 )
             ))
 
             let functions = [weatherFunction]
-            
+
             let chatsStream: AsyncThrowingStream<ChatStreamResult, Error> = openAIClient.chatsStream(
                 query: ChatQuery(
                     messages: conversation.messages.map { message in
@@ -117,7 +118,7 @@ public final class ChatStore: ObservableObject {
                     if let finishReason = choice.finishReason,
                        finishReason == .toolCalls
                     {
-                        functionCalls.forEach { (name: String, argument: String?) in
+                        for (name, argument) in functionCalls {
                             messageText += "Function call: name=\(name) arguments=\(argument ?? "")\n"
                         }
                     }

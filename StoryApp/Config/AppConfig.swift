@@ -16,9 +16,9 @@ extension AppConfig: DependencyKey {
     }
 }
 
-extension DependencyValues {
-    public var appConfig: AppConfig {
+public extension DependencyValues {
+    var appConfig: AppConfig {
         get { self[AppConfig.self] }
         set { self[AppConfig.self] = newValue }
     }
-} 
+}

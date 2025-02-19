@@ -8,19 +8,18 @@ import SwiftData
 public typealias Profile = ProfileSchemaV1.Profile
 
 public enum ProfileSchemaV1: VersionedSchema {
-    nonisolated(unsafe) public static var versionIdentifier = Schema.Version(0, 0, 1)
-    
+    public nonisolated(unsafe) static var versionIdentifier = Schema.Version(0, 0, 1)
+
     public static var models: [any PersistentModel.Type] {
         [Profile.self]
     }
-    
+
     @Model
     public final class Profile {
         public var freeformText: String = ""
-        
+
         public init(freeformText: String) {
             self.freeformText = freeformText
         }
     }
 }
-

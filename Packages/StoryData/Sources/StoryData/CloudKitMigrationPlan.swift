@@ -1,8 +1,8 @@
 import SwiftData
 
 public struct CloudKitMigrationPlan: SchemaMigrationPlan {
-    nonisolated(unsafe) public static var schemas: [any VersionedSchema.Type] = []
-    nonisolated(unsafe) public static var stages: [MigrationStage] = []
-    
+    public nonisolated(unsafe) static var schemas: [any VersionedSchema.Type] = []
+    public nonisolated(unsafe) static var stages: [MigrationStage] = []
+
     public init() {}
 }

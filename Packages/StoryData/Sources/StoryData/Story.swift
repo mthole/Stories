@@ -8,19 +8,18 @@ import SwiftData
 public typealias Story = StorySchemaV1.Story
 
 public enum StorySchemaV1: VersionedSchema {
-    nonisolated(unsafe) public static var versionIdentifier = Schema.Version(0, 0, 1)
-    
+    public nonisolated(unsafe) static var versionIdentifier = Schema.Version(0, 0, 1)
+
     public static var models: [any PersistentModel.Type] {
         [Story.self]
     }
-    
+
     @Model
     public final class Story {
         public var freeformText: String = ""
-        
+
         public init(freeformText: String) {
             self.freeformText = freeformText
         }
     }
 }
-
