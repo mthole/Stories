@@ -25,7 +25,7 @@ struct APIProvidedView: View {
         ContentView(
             chatStore: chatStore
         )
-        .onChange(of: apiKey) { newApiKey in
+        .onChange(of: apiKey) { _, newApiKey in
             let client = OpenAI(apiToken: newApiKey)
             chatStore.openAIClient = client
         }
