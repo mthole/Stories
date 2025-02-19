@@ -202,6 +202,14 @@ struct ChatBubble: View {
               Spacer(minLength: 24)
             case .system:
                 EmptyView()
+            case .developer:
+                Text(message.content)
+                    .font(.footnote.monospaced())
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 12)
+                    .background(assistantBackgroundColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                Spacer(minLength: 24)
             }
         }
     }

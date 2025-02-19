@@ -8,36 +8,38 @@
 import SwiftUI
 import SwiftData
 import StoryData
+import Dependencies
 
 @main
 struct StoryApp: App {
     @AppStorage("apiKey") var apiKey: String = ""
-    @State private var cloudKitRepository: CloudKitRepository
-
+    
+    @Dependency(\.remoteConfigStore) var remoteConfigStore
+    
     let idProvider: () -> String
     let dateProvider: () -> Date
+    
+//    @StateObject private var remoteConfigStore = RemoteConfigStore(service: RemoteConfigService.liveValue)
     
     init() {
         self.idProvider = {
             UUID().uuidString
         }
         self.dateProvider = Date.init
-        self.cloudKitRepository = CloudKitRepository()
     }
-
 
     var body: some Scene {
         WindowGroup {
-            Group {
-                APIProvidedView(apiKey: $apiKey, idProvider: idProvider)
-            }
-            .onAppear(perform: {
-                Task {
-                    let remoteConfiguration = try await cloudKitRepository.fetchRemoteConfiguration()
-                    print("*** remoteConfiguration: \(remoteConfiguration)")
+            APIProvidedView(apiKey: $apiKey, idProvider: idProvider)
+                .task {
+                    await remoteConfigStore.fetch()
+                    NSLog("*** fetched \(remoteConfigStore.config)")
                 }
-            })
+//                .onChange(of: remoteConfigStore.configuration) { config in
+//                    if let config = config {
+//                        apiKey = config.openAiApiKey
+//                    }
+//                }
         }
-        .modelContainer(cloudKitRepository.sharedModelContainer)
     }
 }

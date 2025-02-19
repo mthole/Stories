@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD27EF3E2CF698A4001455DF /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CD27EF3D2CF698A4001455DF /* OpenAI */; };
 		CD27EF422CF698B7001455DF /* StoryData in Frameworks */ = {isa = PBXBuildFile; productRef = CD27EF412CF698B7001455DF /* StoryData */; };
+		CD29B2682D66565300256E12 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = CD29B2672D66565300256E12 /* Dependencies */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD29B2682D66565300256E12 /* Dependencies in Frameworks */,
 				CD27EF422CF698B7001455DF /* StoryData in Frameworks */,
 				CD27EF3E2CF698A4001455DF /* OpenAI in Frameworks */,
 			);
@@ -142,6 +144,7 @@
 			packageProductDependencies = (
 				CD27EF3D2CF698A4001455DF /* OpenAI */,
 				CD27EF412CF698B7001455DF /* StoryData */,
+				CD29B2672D66565300256E12 /* Dependencies */,
 			);
 			productName = StoryApp;
 			productReference = CD9DD1CD2CF69818003A0E10 /* StoryApp.app */;
@@ -228,6 +231,7 @@
 			packageReferences = (
 				CD27EF3C2CF698A4001455DF /* XCRemoteSwiftPackageReference "OpenAI" */,
 				CD27EF3F2CF698AE001455DF /* XCLocalSwiftPackageReference "Packages/StoryData" */,
+				CD29B2662D66565300256E12 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CD9DD1CE2CF69818003A0E10 /* Products */;
@@ -613,6 +617,14 @@
 				minimumVersion = 0.3.0;
 			};
 		};
+		CD29B2662D66565300256E12 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -625,6 +637,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD27EF3F2CF698AE001455DF /* XCLocalSwiftPackageReference "Packages/StoryData" */;
 			productName = StoryData;
+		};
+		CD29B2672D66565300256E12 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD29B2662D66565300256E12 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
