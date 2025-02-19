@@ -5,14 +5,6 @@ public struct AppConfig {
     let iCloudContainerIdentifier: String
     /// The record name used to store and retrieve remote configuration data in CloudKit
     let remoteConfigRecordName: String
-    
-    public init(
-        iCloudContainerIdentifier: String,
-        remoteConfigRecordName: String
-    ) {
-        self.iCloudContainerIdentifier = iCloudContainerIdentifier
-        self.remoteConfigRecordName = remoteConfigRecordName
-    }
 }
 
 extension AppConfig: DependencyKey {

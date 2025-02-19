@@ -3,15 +3,15 @@ import Foundation
 import SwiftData
 import Dependencies
 
-public struct RemoteConfigService {
-    public var fetchRemoteConfig: @Sendable () async throws -> RemoteConfig
+struct RemoteConfigService {
+    var fetchRemoteConfig: @Sendable () async throws -> RemoteConfig
     
     private let container: CKContainer
     private let database: CKDatabase
 }
 
 extension RemoteConfigService: DependencyKey {
-    public static var liveValue: RemoteConfigService {
+    static var liveValue: RemoteConfigService {
         @Dependency(\.appConfig) var config
         
         let container = CKContainer(identifier: config.iCloudContainerIdentifier)
@@ -32,7 +32,7 @@ extension RemoteConfigService: DependencyKey {
 }
 
 extension DependencyValues {
-    public var remoteConfigService: RemoteConfigService {
+    var remoteConfigService: RemoteConfigService {
         get { self[RemoteConfigService.self] }
         set { self[RemoteConfigService.self] = newValue }
     }
