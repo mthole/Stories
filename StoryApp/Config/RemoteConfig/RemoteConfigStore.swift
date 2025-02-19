@@ -8,20 +8,15 @@ final class RemoteConfigStore {
     
     private(set) var config: RemoteConfig?
     private(set) var isLoading = false
-    private(set) var error: Error?
     
     @MainActor
-    func fetch() async {
+    func fetch() async throws -> RemoteConfig {
         isLoading = true
-        error = nil
-        
-        do {
-            config = try await service.fetchRemoteConfig()
-        } catch {
-            self.error = error
-        }
-        
+        let loadedConfig = try await service.fetchRemoteConfig()
+        self.config = loadedConfig
         isLoading = false
+        
+        return loadedConfig
     }
 }
 

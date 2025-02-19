@@ -1,10 +1,3 @@
-//
-//  StoryApp.swift
-//  StoryApp
-//
-//  Created by Michael Thole on 11/24/24.
-//
-
 import Dependencies
 import StoryData
 import SwiftData
@@ -12,34 +5,34 @@ import SwiftUI
 
 @main
 struct StoryApp: App {
-    @AppStorage("apiKey") var apiKey: String = ""
-
-    @Dependency(\.remoteConfigStore) var remoteConfigStore
-
-    let idProvider: () -> String
-    let dateProvider: () -> Date
-
-//    @StateObject private var remoteConfigStore = RemoteConfigStore(service: RemoteConfigService.liveValue)
-
-    init() {
-        idProvider = {
-            UUID().uuidString
-        }
-        dateProvider = Date.init
-    }
-
+    @State private var appState = AppState()
+    private let cloudKitService = CloudKitService()
+    
     var body: some Scene {
         WindowGroup {
-            APIProvidedView(apiKey: $apiKey, idProvider: idProvider)
-                .task {
-                    await remoteConfigStore.fetch()
-                    NSLog("*** fetched \(remoteConfigStore.config)")
+            switch appState.loadingState {
+            case .loading:
+                LoadingView()
+                    .task {
+                        await appState.initialize()
+                    }
+                
+            case .needsICloudAccount:
+                ICloudSignInView()
+                
+            case .configError(let error):
+                ErrorView(error: error, retry: {
+                    Task {
+                        await appState.initialize()
+                    }
+                })
+                
+            case .ready:
+                if let apiKey = appState.apiKey {
+                    MainAppView(apiKey: apiKey)
+                        .modelContainer(cloudKitService.sharedModelContainer)
                 }
-//                .onChange(of: remoteConfigStore.configuration) { config in
-//                    if let config = config {
-//                        apiKey = config.openAiApiKey
-//                    }
-//                }
+            }
         }
     }
 }
