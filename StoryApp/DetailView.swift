@@ -1,8 +1,4 @@
-#if os(iOS)
-    import UIKit
-#elseif os(macOS)
-    import AppKit
-#endif
+import UIKit
 import OpenAI
 import SwiftUI
 
@@ -19,19 +15,11 @@ struct DetailView: View {
     let sendMessage: (String, Model) -> Void
 
     private var fillColor: Color {
-        #if os(iOS)
-            return Color(uiColor: UIColor.systemBackground)
-        #elseif os(macOS)
-            return Color(nsColor: NSColor.textBackgroundColor)
-        #endif
+        Color(uiColor: UIColor.systemBackground)
     }
 
     private var strokeColor: Color {
-        #if os(iOS)
-            return Color(uiColor: UIColor.systemGray5)
-        #elseif os(macOS)
-            return Color(nsColor: NSColor.lightGray)
-        #endif
+        Color(uiColor: UIColor.systemGray5)
     }
 
     var body: some View {
@@ -69,13 +57,7 @@ struct DetailView: View {
             error.localizedDescription
         )
         .font(.caption)
-        .foregroundColor({
-            #if os(iOS)
-                return Color(uiColor: .systemRed)
-            #elseif os(macOS)
-                return Color(.systemRed)
-            #endif
-        }())
+        .foregroundColor(Color(uiColor: .systemRed))
         .padding(.horizontal)
     }
 
@@ -151,27 +133,15 @@ struct ChatBubble: View {
     let message: Message
 
     private var assistantBackgroundColor: Color {
-        #if os(iOS)
-            return Color(uiColor: UIColor.systemGray5)
-        #elseif os(macOS)
-            return Color(nsColor: NSColor.lightGray)
-        #endif
+        Color(uiColor: UIColor.systemGray5)
     }
 
     private var userForegroundColor: Color {
-        #if os(iOS)
-            return Color(uiColor: .white)
-        #elseif os(macOS)
-            return Color(nsColor: NSColor.white)
-        #endif
+        Color(uiColor: .white)
     }
 
     private var userBackgroundColor: Color {
-        #if os(iOS)
-            return Color(uiColor: .systemBlue)
-        #elseif os(macOS)
-            return Color(nsColor: NSColor.systemBlue)
-        #endif
+        Color(uiColor: .systemBlue)
     }
 
     var body: some View {

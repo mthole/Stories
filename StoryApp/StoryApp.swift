@@ -6,7 +6,7 @@ import SwiftUI
 @main
 struct StoryApp: App {
     @State private var appState = AppState()
-    private let cloudKitService = CloudKitService()
+    private let storyDataService = StoryDataService()
     
     var body: some Scene {
         WindowGroup {
@@ -30,7 +30,7 @@ struct StoryApp: App {
             case .ready:
                 if let apiKey = appState.apiKey {
                     MainAppView(apiKey: apiKey)
-                        .modelContainer(cloudKitService.sharedModelContainer)
+                        .modelContainer(storyDataService.sharedModelContainer)
                 }
             }
         }

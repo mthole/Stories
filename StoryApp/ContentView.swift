@@ -13,49 +13,26 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var chatStore: ChatStore
     @Environment(\.idProviderValue) var idProvider
-
     @Environment(\.modelContext) private var modelContext
-    @State private var selectedTab = 0
+    @State private var isShowingProfile = false
 
     @Query private var items: [Story]
 
     var body: some View {
-        TabView(selection: $selectedTab) {
-            ChatView(
-                store: chatStore
-            )
-            .tabItem {
-                Label("Chats", systemImage: "message")
+        ChatView(store: chatStore)
+            .sheet(isPresented: $isShowingProfile) {
+                // TODO: We'll create a ProfileView next
+                Text("Profile View Coming Soon")
             }
-
-            NavigationSplitView {
-                List {
-                    ForEach(items) { item in
-                        NavigationLink {
-                            Text("Story: \(item.freeformText)")
-                        } label: {
-                            Text("Story: \(item.freeformText)")
-                        }
-                    }
-                    .onDelete(perform: deleteItems)
-                }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        EditButton()
-                    }
-                    ToolbarItem {
-                        Button(action: addItem) {
-                            Label("Add Item", systemImage: "plus")
-                        }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        isShowingProfile = true
+                    }) {
+                        Image(systemName: "person.circle")
                     }
                 }
-            } detail: {
-                Text("Select an item")
             }
-            .tabItem {
-                Label("Items", systemImage: "message")
-            }
-        }
     }
 
     private func addItem() {

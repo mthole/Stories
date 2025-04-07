@@ -3,30 +3,25 @@ import SwiftUI
 
 public struct ChatView: View {
     @ObservedObject var store: ChatStore
-
+    
     @Environment(\.dateProviderValue) var dateProvider
     @Environment(\.idProviderValue) var idProvider
-
+    
     public init(store: ChatStore) {
         self.store = store
     }
-
+    
     public var body: some View {
         NavigationSplitView {
             ListView(
                 conversations: $store.conversations,
                 selectedConversationId: Binding<Conversation.ID?>(
-                    get: {
-                        store.selectedConversationID
-                    }, set: { newId in
-                        store.selectConversation(newId)
-                    }
+                    get: { store.selectedConversationID },
+                    set: { store.selectConversation($0) }
                 )
             )
             .toolbar {
-                ToolbarItem(
-                    placement: .primaryAction
-                ) {
+                ToolbarItem(placement: .primaryAction) {
                     Button(action: {
                         store.createConversation()
                     }) {
